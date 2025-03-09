@@ -13,7 +13,4 @@ export default class NewApiService {
   incrementPage() {
     this.page += 1;
   }
-  reset() {
-    this.page = 1;
-  }
 }
