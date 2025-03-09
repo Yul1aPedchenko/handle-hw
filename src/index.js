@@ -1,4 +1,5 @@
 import NewApiService from "./js/js-search";
+import Handlebars from "handlebars";
 const refs = {
   btnLoadMore: document.getElementById("load-more-btn"),
   galleryBody: document.getElementById("image-gallery"),
