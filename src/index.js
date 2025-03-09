@@ -13,13 +13,16 @@ function onLoadMore() {
   newApiService.fetchImages().then(appendImagesMarkup);
 }
 function appendImagesMarkup(images) {
-  const templateSource = `
-    {{#each this}}
-        <img src="{{webformatURL}}" alt="tags">
-    {{/each}}
-    `;
-  console.log(images);
-  const template = Handlebars.compile(templateSource);
-  const markup = template(images);
-  refs.galleryBody.insertAdjacentHTML("beforeend", markup);
+  // const templateSource = `
+  //   {{#each this}}
+  //       <img src="{{webformatURL}}" alt="tags">
+  //   {{/each}}
+  //   `;
+  // console.log(images);
+  // const template = Handlebars.compile(templateSource);
+  // const markup = template(images);
+  const markUp = images.map(image => {
+    return `<img src="${image.webformatURL}" alt="${image.tags}">`;
+  })
+  refs.galleryBody.insertAdjacentHTML("beforeend", markUp.join(''));
 }

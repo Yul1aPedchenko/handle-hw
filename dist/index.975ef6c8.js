@@ -614,15 +614,18 @@ function onLoadMore() {
     newApiService.fetchImages().then(appendImagesMarkup);
 }
 function appendImagesMarkup(images) {
-    const templateSource = `
-    {{#each this}}
-        <img src="{{webformatURL}}" alt="tags">
-    {{/each}}
-    `;
-    console.log(images);
-    const template = (0, _handlebarsDefault.default).compile(templateSource);
-    const markup = template(images);
-    refs.galleryBody.insertAdjacentHTML("beforeend", markup);
+    // const templateSource = `
+    //   {{#each this}}
+    //       <img src="{{webformatURL}}" alt="tags">
+    //   {{/each}}
+    //   `;
+    // console.log(images);
+    // const template = Handlebars.compile(templateSource);
+    // const markup = template(images);
+    const markUp = images.map((image)=>{
+        return `<img src="${image.webformatURL}" alt="${image.tags}">`;
+    });
+    refs.galleryBody.insertAdjacentHTML("beforeend", markUp.join(''));
 }
 
 },{"./js/js-search":"dQMws","handlebars":"56TWV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dQMws":[function(require,module,exports,__globalThis) {
