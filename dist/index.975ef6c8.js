@@ -625,7 +625,7 @@ function appendImagesMarkup(images) {
     refs.galleryBody.insertAdjacentHTML("beforeend", markup);
 }
 
-},{"./js/js-search":"dQMws","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","handlebars":"56TWV"}],"dQMws":[function(require,module,exports,__globalThis) {
+},{"./js/js-search":"dQMws","handlebars":"56TWV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dQMws":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class NewApiService {
