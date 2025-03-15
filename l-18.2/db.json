@@ -1,0 +1,60 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "age": 20,
+      "email": "john.doe@example.com",
+      "phone": "555-1234"
+    },
+    {
+      "name": "OLEG LOX",
+      "age": 19,
+      "email": "123",
+      "phone": "12333",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Bob Johnson",
+      "age": 100,
+      "email": "example@gmail.com",
+      "phone": "555-9012"
+    },
+    {
+      "id": "4bea",
+      "name": "Ann",
+      "age": 17,
+      "email": "ann1234@gmail.com",
+      "phone": "123-1234"
+    },
+    {
+      "id": "d701",
+      "name": "Ann",
+      "age": 17,
+      "email": "ann1234@gmail.com",
+      "phone": "123-1234"
+    },
+    {
+      "id": "420e",
+      "name": "Ann",
+      "age": 17,
+      "email": "ann1234@gmail.com",
+      "phone": "123-1234"
+    },
+    {
+      "id": "b412",
+      "name": "Ann",
+      "age": 17,
+      "email": "ann1234@gmail.com",
+      "phone": "123-1234"
+    },
+    {
+      "id": "d375",
+      "name": "Ann",
+      "age": 17,
+      "email": "ann1234@gmail.com",
+      "phone": "123-1234"
+    }
+  ]
+}

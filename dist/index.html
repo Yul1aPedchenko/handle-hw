@@ -1,1 +1,62 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title><link rel="stylesheet" href="/index.ab823b52.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script></head><body> <div class="container"> <h1>Editor's Choice Images</h1> <div id="image-gallery" class="gallery"></div> <button id="load-more-btn" class="load-more">Завантажити ще</button> </div> <script src="/index.aeb9cc6a.js" type="module"></script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.3a01df49.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Список студентів</h1>
+
+      <button id="get-students-btn">Отримати студентів</button>
+
+      <table id="students-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Ім'я</th>
+            <th>Вік</th>
+            <th>Курс</th>
+            <th>Навички</th>
+            <th>Email</th>
+            <th>Статус</th>
+            <th>Дії</th>
+          </tr>
+        </thead>
+
+        <tbody></tbody>
+      </table>
+
+      <h2>Додати нового студента</h2>
+
+      <form id="add-student-form">
+        <label>Ім'я: <input type="text" id="name" required=""></label>
+        <label>Вік: <input type="number" id="age" required=""></label>
+        <label>Курс: <input type="text" id="course" required=""></label>
+        <label>Навички (через кому): <input type="text" id="skills" required=""></label>
+        <label>Email: <input type="email" id="email" required=""></label>
+        <label>Записаний: <input type="checkbox" id="isEnrolled"></label>
+        <button type="submit">Додати студента</button>
+      </form>
+    </div>
+
+    <div id="edit-modal" class="modal">
+      <div class="modal-content">
+        <h2>Редагувати студента</h2>
+        <form id="edit-student-form" data-id="null">
+          <label>Ім'я: <input type="text" id="edit-name"></label>
+          <label>Вік: <input type="number" id="edit-age"></label>
+          <label>Курс: <input type="text" id="edit-course"></label>
+          <label>Навички (через кому): <input type="text" id="edit-skills"></label>
+          <label>Email: <input type="email" id="edit-email"></label>
+          <label>Записаний: <input type="checkbox" id="edit-isEnrolled"></label>
+          <button type="submit">Зберегти зміни</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/index.672d4772.js"></script>
+  <script src="/handle-hw.3464ddca.js"></script></body>
+</html>
