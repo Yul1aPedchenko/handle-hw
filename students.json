@@ -1,9 +1,8 @@
 {
   "students": [
     {
-      "id": "1",
       "name": "Ivan Petrenko",
-      "age": 15,
+      "age": "20",
       "course": "Web Development",
       "skills": [
         "HTML",
@@ -11,7 +10,8 @@
         "JavaScript"
       ],
       "email": "ivan.petrenko@example.com",
-      "isEnrolled": true
+      "isEnrolled": true,
+      "id": "1"
     },
     {
       "id": "2",
@@ -52,7 +52,7 @@
       "isEnrolled": true
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Mykola Bondarenko",
       "age": 15,
       "course": "Cybersecurity",

@@ -51,12 +51,18 @@ refs.tableBody.addEventListener("click", (e)=>{
         deleteStudent(studentId);
     }
 });
-function getStudents() {
-    return fetch(`${BASE_URL}`).then((r)=>r.json()).then((students)=>renderStudents(students)).catch((error)=>console.log(`Some problems with get students: ${error}`));
+async function getStudents() {
+    try {
+        const response = await fetch(`${BASE_URL}`);
+        const students = await response.json();
+        renderStudents(students);
+    } catch (error) {
+        console.error(`Some problems with get students: ${error}`);
+    }
 }
 function renderStudents(students) {
     refs.tableBody.innerHTML = "";
-    markUp = students.map((student)=>{
+    const markUp = students.map((student)=>{
         return `<tr>
             <td>${student.id}</td>
             <td>${student.name}</td>
@@ -72,7 +78,7 @@ function renderStudents(students) {
     });
     refs.tableBody.insertAdjacentHTML("beforeend", markUp.join(" "));
 }
-function addStudent(e) {
+async function addStudent(e) {
     e.preventDefault();
     const name = document.getElementById("name").value;
     const age = document.getElementById("age").value;
@@ -88,12 +94,19 @@ function addStudent(e) {
         email,
         isEnrolled
     };
-    const newOptions = new Options("POST", JSON.stringify(newStudent));
-    fetch(`${BASE_URL}`, newOptions).then((r)=>r.json()).then(()=>getStudents()).catch((error)=>console.error(`Error with adding student: ${error}`));
+    try {
+        const newOptions = new Options("POST", JSON.stringify(newStudent));
+        const response = await fetch(`${BASE_URL}`, newOptions);
+        await getStudents();
+    } catch (error) {
+        console.error(`Error with adding student: ${error}`);
+    }
     refs.form.reset();
 }
-function openModal(id) {
-    fetch(`${BASE_URL}/${id}`).then((r)=>r.json()).then((student)=>{
+async function openModal(id) {
+    try {
+        const response = await fetch(`${BASE_URL}/${id}`);
+        const student = await response.json();
         document.getElementById("edit-name").value = student.name;
         document.getElementById("edit-age").value = student.age;
         document.getElementById("edit-course").value = student.course;
@@ -101,16 +114,28 @@ function openModal(id) {
         document.getElementById("edit-email").value = student.email;
         document.getElementById("edit-isEnrolled").checked = student.isEnrolled;
         refs.modal.modalForm.setAttribute("data-id", student.id);
-    }).catch((error)=>console.log(`Some problems with get student for edit-modal: ${error}`));
+    } catch (error) {
+        console.error(`Some problems with getting student for edit-modal: ${error}`);
+    }
     refs.modal.modalBody.style.display = "block";
 }
-function updateStudent(id, updateInfo) {
-    const newOptions = new Options("PUT", JSON.stringify(updateInfo));
-    fetch(`${BASE_URL}/${id}`, newOptions).then((r)=>r.json()).then(()=>getStudents()).catch((error)=>console.log(`Error with update student info: ${error}`));
+async function updateStudent(id, updateInfo) {
+    try {
+        const newOptions = new Options("PUT", JSON.stringify(updateInfo));
+        const response = await fetch(`${BASE_URL}/${id}`, newOptions);
+        await getStudents();
+    } catch (error) {
+        console.error(`Error with update student info: ${error}`);
+    }
 }
-function deleteStudent(id) {
-    const newOptions = new Options("DELETE");
-    fetch(`${BASE_URL}/${id}`, newOptions).then((r)=>r.json()).then(()=>getStudents()).catch((error)=>console.log(`Error with delete student: ${error}`));
+async function deleteStudent(id) {
+    try {
+        const newOptions = new Options("DELETE");
+        const response = await fetch(`${BASE_URL}/${id}`, newOptions);
+        await getStudents();
+    } catch (error) {
+        console.error(`Error with delete student: ${error}`);
+    }
 }
 
 //# sourceMappingURL=index.672d4772.js.map
