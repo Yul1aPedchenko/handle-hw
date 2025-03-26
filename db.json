@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Title 1",
+      "content": "text 1",
+      "comments": [
+        {
+          "text": "text"
+        }
+      ]
+    },
+    {
+      "id": "52da",
+      "title": "Json",
+      "content": "our progect",
+      "comments": []
+    },
+    {
+      "id": "7360",
+      "title": "Json 2",
+      "content": "1",
+      "comments": []
+    }
+  ]
+}

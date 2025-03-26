@@ -2,10 +2,12 @@
   "name": "handle-hw",
   "version": "1.0.0",
   "description": "",
+  "main": "script.js",
+  "type": "module",
   "scripts": {
-    "dev": "parcel l-18.2/index.html",
-    "build": "parcel build l-18.2/index.html",
-    "server": "json-server --watch l-18.2/db.json"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "server": "json-server --watch db.json"
   },
   "keywords": [],
   "author": "",
