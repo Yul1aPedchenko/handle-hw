@@ -1,25 +1,39 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "Title 1",
-      "content": "text 1",
-      "comments": [
-        {
-          "text": "text"
-        }
-      ]
+      "id": "1",
+      "title": "This is the first post",
+      "content": "At the first lesson we did three functions: getPosts(), renderPosts() and createPost()",
+      "comments": []
     },
     {
       "id": "52da",
-      "title": "Json",
-      "content": "our progect",
+      "title": "A test post after the first",
+      "content": "Just read it",
       "comments": []
     },
     {
       "id": "7360",
-      "title": "Json 2",
+      "title": "Jsonnnnn",
       "content": "1",
+      "comments": []
+    },
+    {
+      "id": "b1d5",
+      "title": "1",
+      "content": "12",
+      "comments": []
+    },
+    {
+      "id": "48a4",
+      "title": "Json 1",
+      "content": "test",
+      "comments": []
+    },
+    {
+      "id": "cb1b",
+      "title": "Json 3",
+      "content": " test reset",
       "comments": []
     }
   ]
