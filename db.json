@@ -4,7 +4,14 @@
       "id": "1",
       "title": "This is the first post",
       "content": "At the first lesson we did three functions: getPosts(), renderPosts() and createPost()",
-      "comments": []
+      "comments": [
+        {
+          "text": "text"
+        },
+        {
+          "text": "test"
+        }
+      ]
     },
     {
       "id": "52da",
@@ -13,16 +20,14 @@
       "comments": []
     },
     {
-      "id": "7360",
-      "title": "Jsonnnnn",
-      "content": "1",
-      "comments": []
-    },
-    {
       "id": "b1d5",
-      "title": "1",
-      "content": "12",
-      "comments": []
+      "title": "Update title",
+      "content": "update text",
+      "comments": [
+        {
+          "text": "test text"
+        }
+      ]
     },
     {
       "id": "48a4",
@@ -34,6 +39,12 @@
       "id": "cb1b",
       "title": "Json 3",
       "content": " test reset",
+      "comments": []
+    },
+    {
+      "id": "b411",
+      "title": "New post for test",
+      "content": "test test",
       "comments": []
     }
   ]
