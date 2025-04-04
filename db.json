@@ -2,16 +2,9 @@
   "posts": [
     {
       "id": "1",
-      "title": "This is the first post",
+      "title": "This is the first post update",
       "content": "At the first lesson we did three functions: getPosts(), renderPosts() and createPost()",
-      "comments": [
-        {
-          "text": "text"
-        },
-        {
-          "text": "test"
-        }
-      ]
+      "comments": []
     },
     {
       "id": "52da",
@@ -22,7 +15,7 @@
     {
       "id": "b1d5",
       "title": "Update title",
-      "content": "update text",
+      "content": "update text 2",
       "comments": [
         {
           "text": "test text"
@@ -42,9 +35,9 @@
       "comments": []
     },
     {
-      "id": "b411",
-      "title": "New post for test",
-      "content": "test test",
+      "id": "70cc",
+      "title": "4th april test",
+      "content": "just test",
       "comments": []
     }
   ]

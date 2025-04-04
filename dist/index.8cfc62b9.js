@@ -596,7 +596,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"6rimH":[function(require,module,exports,__globalThis) {
-var _post = require("./post");
+var _postJs = require("./post.js");
 const BASE_URL = "http://localhost:3000/posts";
 async function getPosts() {
     try {
@@ -609,7 +609,7 @@ async function getPosts() {
 }
 async function createPost(title, content) {
     try {
-        const bodyEl = JSON.stringify(new (0, _post.basePost)(title, content));
+        const bodyEl = JSON.stringify(new (0, _postJs.basePost)(title, content));
         const options = {
             method: "POST",
             body: bodyEl,
@@ -626,7 +626,9 @@ async function createPost(title, content) {
 }
 async function updatePost(id, title, content) {
     try {
-        const newBody = JSON.stringify(new (0, _post.basePost)(title, content));
+        const old_r = await fetch(`${BASE_URL}/${id}`);
+        const oldData = await old_r.json();
+        const newBody = JSON.stringify(new (0, _postJs.basePost)(title, content, oldData.comments));
         const options = {
             method: "PATCH",
             body: newBody,
@@ -774,7 +776,7 @@ async function startApp() {
 }
 startApp();
 
-},{"./post":"b8k0q"}],"b8k0q":[function(require,module,exports,__globalThis) {
+},{"./post.js":"b8k0q"}],"b8k0q":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "basePost", ()=>basePost);

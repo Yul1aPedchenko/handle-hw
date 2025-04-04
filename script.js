@@ -1,4 +1,4 @@
-import { basePost } from "./post";
+import { basePost } from "./post.js";
 const BASE_URL = "http://localhost:3000/posts";
 async function getPosts() {
   try {
@@ -29,7 +29,9 @@ async function createPost(title, content) {
 
 async function updatePost(id, title, content) {
   try {
-    const newBody = JSON.stringify(new basePost(title, content));
+    const old_r = await fetch(`${BASE_URL}/${id}`);
+    const oldData = await old_r.json();
+    const newBody = JSON.stringify(new basePost(title, content, oldData.comments));
     const options = {
       method: "PATCH",
       body: newBody,
